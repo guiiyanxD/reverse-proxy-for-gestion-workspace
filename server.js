@@ -1,5 +1,5 @@
 const express = require('express');
-const {createProxyMiddelware} = require('http-proxy-middelware');
+const {createProxyMiddelware} = require('http-proxy-middleware');
 const app = express();
 
 app.use('/api', createProxyMiddelware({
