@@ -12,6 +12,9 @@ app.use(cors({
 app.use('/api', createProxyMiddleware ({
 	target: 'http://uhqu8rqq4t33xe1c0012wvrb.155.133.27.31.sslip.io',
 	changeOrigin: true,
+	pathRewrite: {
+        '^/api': ''
+    },
 	onProxyReq: (proxyReq, req, res) => {
         if (req.method === 'OPTIONS') {
             res.status(200).send();
