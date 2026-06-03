@@ -1,8 +1,8 @@
 const express = require('express');
-const {createProxyMiddelware} = require('http-proxy-middleware');
+const {createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
-app.use('/api', createProxyMiddleware({
+app.use('/api', createProxyMiddleware ({
 	target: 'http://uhqu8rqq4t33xe1c0012wvrb.155.133.27.31.sslip.io',
 	changeOrigin: true
 }));
