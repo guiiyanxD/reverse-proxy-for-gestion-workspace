@@ -20,6 +20,7 @@
   "homepage": "https://github.com/guiiyanxD/reverse-proxy-for-gestion-workspace#readme",
   "dependencies": {
     "express": "^5.2.1",
-    "http-proxy-middelware": "^0.0.1-security"
+    "http-proxy-middelware": "^0.0.1-security",
+    "http-proxy-middleware": "^4.0.0"
   }
 }
