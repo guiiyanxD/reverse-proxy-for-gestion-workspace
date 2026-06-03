@@ -9,7 +9,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-app.use('/api', createProxyMiddleware ({
+app.use(['/api', '/auth'], createProxyMiddleware ({
 	target: 'http://uhqu8rqq4t33xe1c0012wvrb.155.133.27.31.sslip.io',
 	changeOrigin: true,
 	pathRewrite: {
