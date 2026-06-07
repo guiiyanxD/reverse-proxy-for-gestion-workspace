@@ -25,6 +25,10 @@ app.use(['/api', '/auth'], createProxyMiddleware ({
 app.use('/graphql', createProxyMiddleware({
 	target: 'http://usermanagement-prod.eba-pdsbyyjq.us-east-1.elasticbeanstalk.com',
 	changeOrigin: true,
+	onProxyReq: (proxyReq) => {
+		proxyReq.removeHeader('origin');
+		proxyReq.removeHeader('referer');
+	}
 }));
 
 app.listen(3000, ()=>console.log('Proxy corriendo en el puerto 3000'));
